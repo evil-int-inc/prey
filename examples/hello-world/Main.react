@@ -1,0 +1,5 @@
+class
+  @fun
+    init: void
+      print(`Hello world!`)
+      print(777)
