@@ -41,3 +41,7 @@ class
           x = 111
           z
 ```
+# v1.2.0
+## new changes:
+- Added new import scope modifier: `@local` - import allowed only in current directory
+- Added new import scope modifier: `@invisible` - import allowed nowhere
