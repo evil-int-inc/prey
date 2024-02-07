@@ -45,3 +45,9 @@ class
 ## new changes:
 - Added new import scope modifier: `@local` - import allowed only in current directory
 - Added new import scope modifier: `@invisible` - import allowed nowhere
+- # v1.3.0
+## new changes:
+- Added new native class `Date`:
+- Static method `Date.now` - current date as ms.
+- Static method `Date.toISOString` - converts ms to iso string.
+- public field `date.ms` - keeps date as ms.
