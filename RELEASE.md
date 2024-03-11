@@ -56,42 +56,24 @@ class
 - Added new class scope modifier: `@template` - type template arguments for class, all data in class can use provided type. But its usage restriction is equal to `unknwon` type.
 - All template arguments required yet.
 - Template argument must start with `_` and be in PascalCase.
-- While class instantiating, all template arguments (types) must be provided in `<` (open template arguments calling symbol) and `>` (close template arguments calling symbol).
+- While class instantiating, all template arguments (types) must be provided in `<` (open template arguments calling symbol) and `>` (close template arguments calling symbol), before arguments calling `()`. If there is not template argument for class instance, you must not use `<>` symbols.
 ```
 @onlyUp
 class
-  @fun
-    getString: string
-      @params
-        x: integer
-        y: integer
-        z = 777
-        w = `Good boy!`
-
-      => `{x} + {y} = {z}, {w}`
-
-    testPrint: void
-      @params
-        x: integer
-        y: integer
-        z = 777
-        w = `Good boy!`
-
-      print(`{x} + {y} = {z}, {w}`)
+  @template
+    _PrintedValue
+    _T
+  @params
+    a: _PrintedValue
+    b: _PrintedValue
 
   @public
     @fun
       test: void
-        @read
-          string = getString(
-            y = 111
-            x = 666
+        print(a)
+        print(b)
+        
+...
 
-          z = 222
-
-        print(string)
-        testPrint(
-          y = 111
-          x = 111
-          z
+templateClass = TemplateClass<integer, integer>(1, 2)
 ```
