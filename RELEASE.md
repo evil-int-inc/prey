@@ -43,11 +43,37 @@ class
 ```
 # v1.2.0
 ## new changes:
-- Added new import scope modifier: `@local` - import allowed only in current directory
-- Added new import scope modifier: `@invisible` - import allowed nowhere
-- # v1.3.0
+- Added new import scope modifier: `@local` - import allowed only in current directory.
+- Added new import scope modifier: `@invisible` - import allowed nowhere.
+# v1.3.0
 ## new changes:
-- Added new native class `Date`:
+- Added new native class `Date`.
 - Static method `Date.now` - current date as ms.
 - Static method `Date.toISOString` - converts ms to iso string.
 - public field `date.ms` - keeps date as ms.
+# v1.4.0
+## new changes:
+- Added new class scope modifier: `@template` - type template arguments for class, all data in class can use provided type. But its usage restriction is equal to `unknwon` type.
+- All template arguments required yet.
+- Template argument must start with `_` and be in PascalCase.
+- While class instantiating, all template arguments (types) must be provided in `<` (open template arguments calling symbol) and `>` (close template arguments calling symbol), before arguments calling `()`. If there is not template argument for class instance, you must not use `<>` symbols.
+```
+@onlyUp
+class
+  @template
+    _PrintedValue
+    _T
+  @params
+    a: _PrintedValue
+    b: _PrintedValue
+
+  @public
+    @fun
+      test: void
+        print(a)
+        print(b)
+        
+...
+
+templateClass = TemplateClass<integer, integer>(1, 2)
+```
