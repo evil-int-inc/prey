@@ -77,3 +77,26 @@ class
 
 templateClass = TemplateClass<integer, integer>(1, 2)
 ```
+# v1.5.0
+## new changes:
+- Added new native class `Vector`.
+- Fixed incorrect work of `get` variables.
+- Fixed incorrect work of templates arguments.
+- Named arguments now works with template arguments.
+```
+@onlyUp
+class
+  @public
+    @fun
+      test: void
+        @read
+          vector = Vector<integer>(0, 1, 2, 3, 4)
+          first = vector.get(0)
+          print(first)
+          vector.set(0, -1)
+          print(vector.get(0))
+          print(vector.size)
+
+        print(vector)
+        print(first)
+```
