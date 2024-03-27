@@ -100,3 +100,26 @@ class
         print(vector)
         print(first)
 ```
+# v1.6.0
+## new changes:
+- Added new native class `Map`.
+- Fixed incorrect arguments placement of `get` of `Vector` class.
+```
+@onlyUp
+class
+  @public
+    @fun
+      test: void
+        @read
+          map = Map<string, integer>()
+          map.set(`theater`, 0)
+          map.set(`office`, 1)
+          map.set(`skyscraper`, 2)
+          first = map.get(`theater`)
+          print(first)
+          map.set(`theater`, -1)
+          print(map.get(`theater`))
+
+        print(map)
+        print(first)
+```
