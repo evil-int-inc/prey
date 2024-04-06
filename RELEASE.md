@@ -123,3 +123,51 @@ class
         print(map)
         print(first)
 ```
+# v1.6.0
+## new changes:
+- Added new scope modifier: `for in` - a loop by all elements and keys in Map, Vector or string.
+- Fixed internal name conflicts.
+```
+@onlyUp
+class
+  @params
+    x = 10
+  @public
+    @let
+      y = x - 10
+
+    @fun
+      test: void
+        for value in x
+          print(value)
+          for value, key in y
+            print(key)
+            print(value)
+
+        for char, index in `for in`
+          print(char)
+          print(index)
+
+        for char in `for in`
+          print(char)
+
+        @read
+          v = Vector<string>(`f`, `o, `r, ` `, `i`, `n`)
+          m = Map<string, integer>()
+          m.set(`H`, -1)
+          m.set(`i`, 1)
+
+        for char, index in v
+          print(char)
+          print(index)
+
+        for char in v
+          print(char)
+
+        for number, char in m
+          print(char)
+          print(index)
+
+        for number in m
+          print(number)
+```
