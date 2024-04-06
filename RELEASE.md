@@ -123,7 +123,7 @@ class
         print(map)
         print(first)
 ```
-# v1.6.0
+# v1.7.0
 ## new changes:
 - Added new scope modifier: `for in` - a loop by all elements and keys in Map, Vector or string.
 - Fixed internal name conflicts.
