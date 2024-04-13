@@ -174,7 +174,7 @@ class
 # v1.8.0
 ## new changes:
 - Added new function modifier: `@async` - changes function return type to `Future`, it allows to run code asynchronously.
-- Added new unary operator `~` (await): force a program to run `Future` term to be executed synchronously. It can be used even if function is synchronous.
+- Added new unary operator `~` (await): force a program to run `Future` term synchronously. It can be used even inside synchronous functions.
 - Changed `toString` unary operator symbol from `~` to `@`.
 ```
 @onlyUp
