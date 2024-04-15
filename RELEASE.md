@@ -171,3 +171,29 @@ class
         for number in m
           print(number)
 ```
+# v1.8.0
+## new changes:
+- Added new function modifier: `@async` - changes function return type to `Future`, it allows to run code asynchronously.
+- Added new unary operator `~` (await): force a program to run `Future` term synchronously. It can be used even inside synchronous functions.
+- Changed `toString` unary operator symbol from `~` to `@`.
+```
+@onlyUp
+class
+  @fun
+    @async
+    testIntegerFuture: Future<integer>
+      => 777
+
+    @async
+    testVoidFuture: Future<void>
+      @read
+        value = ~testIntegerFuture()
+      print(value)
+
+  @public
+    @fun
+      test: void
+        print(Date.now())
+        testVoidFuture()
+        print(Date.now())
+```
