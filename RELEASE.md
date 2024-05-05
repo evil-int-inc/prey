@@ -197,3 +197,50 @@ class
         testVoidFuture()
         print(Date.now())
 ```
+# v1.9.0
+## new changes:
+- Added new native class `ErrorMessage`.
+- Added new operator `==>` (raise): it raises instance of ErrorMessage class until nearest `try` scope or ends current process.
+- Added new scope modifier: `try` - preventing for process to collapse. Can only be used with `catch` scope modifier.
+- Added new scope modifier: `catch` - preventing for process to collapse, catches the instance of ErrorMessage. Can only be used with `try` scope modifier.
+- Now named arguments syntax works with `=>` and `==>` operators.
+- Added validation for correct usage of named arguments.
+- Now all compilation errors have unified correct view with provided line number of error.
+```
+@onlyUp
+class
+  @fun
+    returnShortcutDate: Date
+      @read
+        ms = 777
+      => Date(
+        ms
+
+    throwShortcutError: void
+      ==> MessageError(
+        message = `Throw error test.`
+
+    throwError: void
+      ==> MessageError(`Throw error test.`)
+
+  @public
+    @fun
+      test: void
+        # Test compilation error: Variable is not defined: error.
+        # print(error)
+        @let
+          date = Date(0)
+
+        try
+          throwShortcutError()
+        catch e
+          print(e.message)
+
+        try
+          date = returnShortcutDate()
+          throwError()
+        catch e
+          print(e.message)
+
+        print(date.ms)
+```
