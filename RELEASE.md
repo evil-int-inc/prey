@@ -244,3 +244,29 @@ class
 
         print(date.ms)
 ```
+# v1.10.0
+## new changes:
+- Added new class modifier `@static`. If it's applied, all properties and methods of the class are now static. Apply restrictions to this class: can't be enum, can extend only static classes, can't be instantiated.
+- Fixed incorrect compilation of static properties and methods.
+```
+@onlyUp
+@static
+class
+  privateVariable = `Static private variable`
+
+  @public
+    publicVariable = `Static public variable`
+
+    @fun
+      test: void
+        for i in 5
+          @read
+            variable = i
+
+          if i == 3
+            print(`Static method {variable}`)
+
+        print(`Static method`)
+        print(privateVariable)
+        print(publicVariable)
+```
