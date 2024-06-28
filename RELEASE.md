@@ -270,3 +270,44 @@ class
         print(privateVariable)
         print(publicVariable)
 ```
+# v1.11.0
+## new changes:
+- Added new class modifier `@virtual`. If it's applied, all properties and methods of the class are now virtual. Apply restrictions to this class: can't be another subtype (enum, static), can extend only virtual classes, can't be instantiated. All properties of virtual class have only type but not implementation.
+- Added new class scope modifier `@implements`. If it's applied, all properties of implemented class must be implemented.
+- Improved class scope modifiers compilation validation.
+```
+@local
+@virtual
+class
+  @public
+    a: float
+    b: float
+
+    @fun
+      init: void
+      destroy: void
+      test: void
+      
+-------------------
+      
+@import
+  .VirtualClass
+
+@onlyUp
+class
+  @implements
+    VirtualClass
+  @public
+    a = 1.0
+    b = 1.0
+
+    @fun
+      init: void
+        print(`init`)
+      destroy: void
+        print(`destroy`)
+      test: void
+        print(a)
+        print(b)
+        print(`test`)
+```
