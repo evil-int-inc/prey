@@ -1,0 +1,19 @@
+@import
+  figures
+    Rhomb
+    Square
+
+class
+  @fun
+    init: void
+      @read
+        rhomb = Rhomb()
+        square = Square()
+
+      print(`Draw figures`)
+
+      print(`Let's draw rhombus`)
+      rhomb.draw()
+
+      print(`Let's draw square`)
+      square.draw()
