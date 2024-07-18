@@ -1,4 +1,4 @@
-# Prey - programming language. Current version 0.11.0.
+# Prey - programming language. Current version 0.12.0.
 
 # To run programs do followings:
 - install last version of g++
