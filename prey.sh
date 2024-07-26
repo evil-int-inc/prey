@@ -29,5 +29,6 @@ if ! command -v g++ &> /dev/null; then
 fi
 
 ./compiler-to-cpp "$from"
-g++ -w -o app to/Main.cpp
+# TODO: compile to c++23
+g++ -w -o app to/Main.cpp -std=c++20
 ./app
