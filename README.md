@@ -5,7 +5,7 @@
 - example: `sh prey.sh ./examples/hello-world`
 
 # Key features:
-- fast compiler - no slow runtime.
+- fast compiler - no slow runtime.K
 - high level abstraction.
 - unlimited runtime speed which is achieved by unique architecture. It can compile code to any language as intermediary and harness its power. Current supported languages: `c++`.
 - universal application. Current supported area of applications: `back-end`, `service`.
@@ -712,7 +712,7 @@ class
 
 # 0.13.0.
 ## new changes:
-- Added possibility to pass function inside a function of level 1. Passing function as a parameter inside Class or function as function parameter is forbidden.
+- Added the possibility to pass a function inside a function of level 1. Passing a function as a parameter inside a class or a function as a function parameter is forbidden.
 ```
 @onlyUp
 class
