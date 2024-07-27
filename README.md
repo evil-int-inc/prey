@@ -5,7 +5,7 @@
 - example: `sh prey.sh ./examples/hello-world`
 
 # Key features:
-- fast compiler - no slow runtime.K
+- fast compiler - no slow runtime.
 - high level abstraction.
 - unlimited runtime speed which is achieved by unique architecture. It can compile code to any language as intermediary and harness its power. Current supported languages: `c++`.
 - universal application. Current supported area of applications: `back-end`, `service`.
