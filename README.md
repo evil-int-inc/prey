@@ -1,7 +1,6 @@
-# Prey - programming language. Current version 0.12.0.
+# Prey - programming language. Current version 0.13.0.
 
 # To run programs do followings:
-- install last version of g++
 - run `sh <path-to-prey.sh-script> <path-to-source-code>`
 - example: `sh prey.sh ./examples/hello-world`
 
@@ -709,4 +708,48 @@ class
         print(a)
         print(b)
         print(`test`)
+```
+
+# 0.13.0.
+## new changes:
+- Added the possibility to pass a function inside a function of level 1. Passing a function as a parameter inside a class or a function as a function parameter is forbidden.
+```
+@onlyUp
+class
+  c = 1
+
+  @public
+    @fun
+      sum: integer
+        @params
+          a: integer
+          b: integer
+
+        => a + b
+
+      noParamsFunction: void
+        print(`This function has no params`)
+
+      testNoParams: void
+        @params
+          @fun
+            noParamsFunction: void
+
+        noParamsFunction()
+
+      testSum: integer
+        @params
+          a: integer
+          b: integer
+          @fun
+            sum: integer
+              @params
+                a: integer
+                b: integer
+
+        => sum(a, b)
+
+      test: void
+        testNoParams(noParamsFunction)
+        print(testSum(1, c, sum))
 ```
