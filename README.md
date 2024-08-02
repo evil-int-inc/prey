@@ -756,7 +756,7 @@ class
 
 # 0.14.0.
 ## new changes:
-- Added new native class `FS`.It supports handling text files.
+- Added new native class `FS`. It supports handling text files.
 - Fixed incorrect compilation of MessageError class.
 - Fixed incorrect handling of function which returns Future<void>.
 ```
