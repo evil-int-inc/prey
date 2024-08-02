@@ -1,5 +1,12 @@
 # compilation
-to
+to/*
+!to/Date__.cpp
+!to/Error__.cpp
+!to/FS__.cpp
+!to/Root__.cpp
+!to/String__.cpp
+!to/Terminal__.cpp
+!to/types__.cpp
 
 # Mac os
 .DS_Store
