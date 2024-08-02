@@ -1,4 +1,4 @@
-# Prey - programming language. Current version 0.13.0.
+# Prey - programming language. Current version 0.14.0.
 
 # To run programs do followings:
 - run `sh <path-to-prey.sh-script> <path-to-source-code>`
@@ -752,4 +752,46 @@ class
       test: void
         testNoParams(noParamsFunction)
         print(testSum(1, c, sum))
+```
+
+# 0.14.0.
+## new changes:
+- Added new native class `FS`.It supports handling text files.
+- Fixed incorrect compilation of MessageError class.
+- Fixed incorrect handling of function which returns Future<void>.
+```
+@onlyUp
+class
+  @fun
+    testRead: string
+      @read
+        path = `/users/Jane/test.txt`
+      @let
+        string = ``
+
+      if FS.exists(path)
+        string = ~FS.read(path)
+
+      => string
+
+    testWrite: boolean
+      @params
+        text: string
+      @read
+        path = `/users/Jane/test.txt`
+
+      if FS.exists(path)
+        ~FS.write(path, text, true)
+        => true
+
+      => false
+
+  @public
+    @fun
+      test: void
+        print(Date.now())
+        print(testRead())
+        if testWrite(`new Text`)
+          print(testRead())
+        print(Date.now())
 ```
