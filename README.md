@@ -799,7 +799,7 @@ class
 
 # 0.15.0.
 ## new changes:
-- Added new native class `Server`. It supports text response, for now, to whoever requests it.
+- Added new native class `Server`. For now, it supports text response to whoever requests it.
 ```
 @onlyUp
 class
