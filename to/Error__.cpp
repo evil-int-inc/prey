@@ -3,7 +3,6 @@
 //
 // TODO: remove '#include <iostream>'
 #include <iostream>
-#include "Root__.cpp"
 
 class ErrorData__ {
 public:
