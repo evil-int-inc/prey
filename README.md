@@ -1,4 +1,4 @@
-# Prey - programming language. Current version 0.14.0.
+# Prey - programming language. Current version 0.15.0.
 
 # To run programs do followings:
 - run `sh <path-to-prey.sh-script> <path-to-source-code>`
@@ -794,4 +794,19 @@ class
         if testWrite(`new Text`)
           print(testRead())
         print(Date.now())
+```
+
+
+# 0.15.0.
+## new changes:
+- Added new native class `Server`. For now, it supports text response to whoever requests it.
+```
+@onlyUp
+class
+  @public
+    @fun
+      test: void
+        @read
+          server = Server(2999)
+        ~server.run(`Response from server!`)
 ```
