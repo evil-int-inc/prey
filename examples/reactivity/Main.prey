@@ -1,0 +1,10 @@
+@import
+  .Modifiers
+
+class
+  @fun
+    init: void
+      @read
+        modifiers = Modifiers()
+
+      modifiers.calculate()

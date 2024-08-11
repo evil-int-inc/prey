@@ -1,15 +1,6 @@
 # compilation
 to/*
-!to/Date__.cpp
-!to/Vector__.cpp
-!to/Server__.cpp
-!to/Map__.cpp
-!to/Error__.cpp
-!to/Root__.cpp
-!to/FS__.cpp
-!to/String__.cpp
-!to/Terminal__.cpp
-!to/types__.cpp
+app
 
 # Mac os
 .DS_Store
