@@ -1,4 +1,4 @@
-# Prey - programming language. Current version 0.15.0.
+# Prey - programming language. Current version 0.15.1.
 
 # To run programs do followings:
 - run `sh <path-to-prey.sh-script> <path-to-source-code>`
@@ -810,3 +810,8 @@ class
           server = Server(2999)
         ~server.run(`Response from server!`)
 ```
+
+# 0.15.1.
+## bugfix:
+- fixed incorrect working of `@let` and `@react` variables.
+- added ./examples/reactivity.
