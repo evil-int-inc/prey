@@ -1,0 +1,39 @@
+@local
+class
+  @let
+    number = 0
+
+  @public
+    @let
+      letField = number + 555
+
+    @get
+      getField = number + 665
+
+    @react
+      reactField = number + 775
+      secondReactField = reactField + 334
+
+    @fun
+      calculate: void
+        print(`number: {number}`)
+        print(`let: {letField}`)
+        print(`get: {getField}`)
+        print(`react: {reactField}`)
+        print(`second react: {secondReactField}`)
+        print(`----------------`)
+
+        number++
+        print(`number: {number}`)
+        print(`let: {letField}`)
+        print(`get: {getField}`)
+        print(`react: {reactField}`)
+        print(`second react: {secondReactField}`)
+        print(`----------------`)
+
+        number++
+        print(`number: {number}`)
+        print(`let: {letField}`)
+        print(`get: {getField}`)
+        print(`react: {reactField}`)
+        print(`second react: {secondReactField}`)

@@ -2,6 +2,14 @@
 
 from=$1
 
+# Cleaning
+if [ -f app ]; then
+  rm app
+fi
+if [ -d to ]; then
+  rm -rf to
+fi
+
 # Check if g++ is installed
 if ! command -v g++ &> /dev/null; then
   echo "g++ is not installed. Installing..."
@@ -28,7 +36,16 @@ if ! command -v g++ &> /dev/null; then
   echo "g++ installation complete."
 fi
 
+# Preparing compilation environment
+mkdir to
+cp ./library/c++/* to
+
+# Checking code validity at a compile time and then compile
 ./compiler-to-cpp "$from"
+
+# Compile to binary
 # TODO: compile to c++23
 g++ -w -o app to/Main.cpp -std=c++20
+
+# Launch app
 ./app
