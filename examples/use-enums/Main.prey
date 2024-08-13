@@ -1,0 +1,16 @@
+@import
+  enums
+    NumberEnum
+    InheritedEnum
+
+class
+  @fun
+    init: void
+      print(NumberEnum.x)
+      print(NumberEnum.y)
+      print(NumberEnum.z)
+
+      print(InheritedEnum.car)
+      print(InheritedEnum.ship)
+      print(InheritedEnum.aircraft)
+      print(InheritedEnum.bicycle)
