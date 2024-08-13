@@ -1,0 +1,6 @@
+@local
+@enum
+class
+  car
+  ship
+  aircraft

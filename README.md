@@ -1,4 +1,4 @@
-# Prey - programming language. Current version 0.15.1.
+# Prey - programming language. Current version 0.15.2.
 
 # To run programs do followings:
 - run `sh <path-to-prey.sh-script> <path-to-source-code>`
@@ -815,3 +815,8 @@ class
 ## bugfix:
 - fixed incorrect working of `@let` and `@react` variables.
 - added ./examples/reactivity.
+
+# 0.15.2.
+## bugfix:
+- fixed incorrect working of `@enum` class.
+- added ./examples/use-enum.

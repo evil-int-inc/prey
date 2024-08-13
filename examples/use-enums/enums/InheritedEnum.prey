@@ -1,0 +1,10 @@
+@import
+  .ShortcutEnum
+
+@onlyUp
+@enum
+class
+  @extends
+    ShortcutEnum
+
+  bicycle
