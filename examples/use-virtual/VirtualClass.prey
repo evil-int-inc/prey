@@ -1,0 +1,11 @@
+@local
+@virtual
+class
+  @public
+    a: float
+    b: float
+
+    @fun
+      init: void
+      destroy: void
+      test: void

@@ -1,0 +1,13 @@
+@import
+  static
+    StaticClass
+    StaticFields
+
+class
+  @fun
+    init: void
+      StaticClass.print()
+      StaticFields.print()
+
+      print(`Public access to field of StaticClass: {StaticClass.publicMessage}`)
+      print(`Public access to field of StaticFields: {StaticFields.publicMessage}`)

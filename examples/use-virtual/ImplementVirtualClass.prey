@@ -1,0 +1,20 @@
+@import
+  .VirtualClass
+
+@local
+class
+  @implements
+    VirtualClass
+  @public
+    a = 555.555
+    b = 777.777
+
+    @fun
+      init: void
+        print(`init`)
+      destroy: void
+        print(`destroy`)
+      test: void
+        print(a)
+        print(b)
+        print(`test`)
