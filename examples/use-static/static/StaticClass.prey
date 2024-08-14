@@ -1,0 +1,13 @@
+@onlyUp
+@static
+class
+  info = `Message from 'StaticClass' class: `
+  privateMessage = `Private Message!`
+
+  @public
+    publicMessage = `Public Message!`
+
+    @fun
+      print: void
+        Library.print(`{info}{privateMessage}`)
+        Library.print(`{info}{publicMessage}`)

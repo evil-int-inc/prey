@@ -1,4 +1,4 @@
-# Prey - programming language. Current version 0.15.2.
+# Prey - programming language. Current version 0.15.3.
 
 # To run programs do followings:
 - run `sh <path-to-prey.sh-script> <path-to-source-code>`
@@ -820,3 +820,11 @@ class
 ## bugfix:
 - fixed incorrect working of `@enum` class.
 - added ./examples/use-enum.
+
+# 0.15.3.
+## bugfix:
+- fixed incorrect working of `@static` class.
+- fixed incorrect working of `@static` fields.
+- fixed incorrect working of `@virtual` class.
+- added ./examples/use-static.
+- added ./examples/use-virtual.

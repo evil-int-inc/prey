@@ -1,0 +1,10 @@
+@import
+  .ImplementVirtualClass
+
+class
+  @fun
+    init: void
+      @read
+        implementedVirtualClass = ImplementVirtualClass()
+
+      implementedVirtualClass.test()
