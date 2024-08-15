@@ -1,0 +1,18 @@
+class
+  path = `<absolute-path-to-your-text.txt-file>`
+
+  @fun
+    init: void
+      if FS.exists(path)
+        print(`File content:`)
+        print(~FS.read(path))
+
+        print(`Append new line to file:`)
+        ~FS.write(path, `New line!`)
+        print(~FS.read(path))
+
+        print(`Override file content:`)
+        ~FS.write(path, `Override!`, true)
+        print(~FS.read(path))
+      else
+        print(`File not found`)
