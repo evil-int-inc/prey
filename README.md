@@ -1,4 +1,4 @@
-# Prey - programming language. Current version 0.15.3.
+# Prey - programming language. Current version 0.15.4.
 
 # To run programs do followings:
 - run `sh <path-to-prey.sh-script> <path-to-source-code>`
@@ -828,3 +828,8 @@ class
 - fixed incorrect working of `@virtual` class.
 - added ./examples/use-static.
 - added ./examples/use-virtual.
+
+# 0.15.4.
+## bugfix:
+- fixed incorrect working of `Future` class.
+- added ./examples/file-stream.
