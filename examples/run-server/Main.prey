@@ -1,0 +1,10 @@
+@onlyUp
+class
+  port = 2999
+  @public
+    @fun
+      init: void
+        @read
+          server = Server(port)
+        print(`Listen server on port {port}!`)
+        ~server.run(`Response from server!`)
