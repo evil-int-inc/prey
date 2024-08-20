@@ -1,3 +1,8 @@
+![Prey - programming language](logo.svg)
+
+Prey - programming language.
+[license - APACHE 2.0](LICENSE)
+
 # Prey - programming language. Current version 0.15.6.
 
 # To run programs do followings:
@@ -447,7 +452,7 @@ class
 - Added new class scope modifier: `@template` - type template arguments for class, all data in class can use provided type. But its usage restriction is equal to `unknwon` type.
 - All template arguments required yet.
 - Template argument must start with `_` and be in PascalCase.
-- While class instantiating, all template arguments (types) must be provided in `<` (open template arguments calling symbol) and `>` (close template arguments calling symbol), before arguments calling `()`. If there is not template argument for class instance, you must not use `<>` symbols.
+- While class instantiating, all template arguments (types) must be provided in `<` (open template arguments calling symbol) and `>` (close template arguments calling symbol), before arguments calling `()`. If there is no template argument for class instance, you must not use `<>` symbols.
 ```
 @onlyUp
 class
