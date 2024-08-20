@@ -801,7 +801,6 @@ class
         print(Date.now())
 ```
 
-
 # 0.15.0.
 ## new changes:
 - Added new native class `Server`. For now, it supports text response to whoever requests it.
@@ -848,3 +847,4 @@ class
 ## bugfix:
 - fixed incorrect working of `@extends` modifier.
 - added ./examples/use-inheritance
+
