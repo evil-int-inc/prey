@@ -1,0 +1,23 @@
+@import
+  .InheritanceOne
+  .InheritanceTwo
+
+@onlyUp
+class
+  @params
+    a: float
+    b: float
+    c = 777
+    d = 1111
+  @extends
+    InheritanceOne
+    InheritanceTwo
+
+  @public
+    x = a + b + c + d
+
+    @fun
+      test: void
+        print(x)
+        print(y)
+        print(z)
