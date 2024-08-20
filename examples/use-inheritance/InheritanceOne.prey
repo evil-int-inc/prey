@@ -1,0 +1,9 @@
+class
+  @params
+    a: float
+    b: float
+    c: integer
+    d: integer
+
+  @public
+    y = a + b + c + d

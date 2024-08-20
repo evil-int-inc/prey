@@ -1,4 +1,4 @@
-# Prey - programming language. Current version 0.15.5.
+# Prey - programming language. Current version 0.15.6.
 
 # To run programs do followings:
 - run `sh <path-to-prey.sh-script> <path-to-source-code>`
@@ -834,8 +834,13 @@ class
 - fixed incorrect working of `Future` class.
 - added ./examples/file-stream.
 
-
 # 0.15.5.
 ## bugfix:
 - fixed incorrect handling of `Future` calling.
 - added ./examples/run-server
+
+
+# 0.15.6.
+## bugfix:
+- fixed incorrect working of `@extends` modifier.
+- added ./examples/use-inheritance

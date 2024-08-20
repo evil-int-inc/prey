@@ -1,0 +1,10 @@
+@import
+  .Params
+  
+class
+  @fun
+    init: void
+      @read
+        params = Params(111.0, 555.0)
+
+      params.test()
