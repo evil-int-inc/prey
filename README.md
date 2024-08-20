@@ -839,7 +839,6 @@ class
 - fixed incorrect handling of `Future` calling.
 - added ./examples/run-server
 
-
 # 0.15.6.
 ## bugfix:
 - fixed incorrect working of `@extends` modifier.
