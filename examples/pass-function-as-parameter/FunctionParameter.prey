@@ -1,0 +1,38 @@
+@local
+class
+  c = 1
+
+  @public
+    @fun
+      sum: integer
+        @params
+          a: integer
+          b: integer
+
+        => a + b
+
+      noParamsFunction: void
+        print(`Function 'noParamsFunction' has no params`)
+
+      testNoParams: void
+        @params
+          @fun
+            noParamsFunction: void
+
+        noParamsFunction()
+
+      testSum: integer
+        @params
+          a: integer
+          b: integer
+          @fun
+            sum: integer
+              @params
+                a: integer
+                b: integer
+
+        => sum(a, b)
+
+      test: void
+        testNoParams(noParamsFunction)
+        print(`Result of testSum: {testSum(1, c, sum)}`)

@@ -1,0 +1,9 @@
+@import
+  .FunctionParameter
+
+class
+  @fun
+    init: void
+      @read
+        functionParameter = FunctionParameter()
+        functionParameter.test()
