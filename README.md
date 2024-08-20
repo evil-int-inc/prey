@@ -847,3 +847,4 @@ class
 ## bugfix:
 - fixed incorrect working of `@extends` modifier.
 - added ./examples/use-inheritance
+
