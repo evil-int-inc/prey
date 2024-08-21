@@ -1,0 +1,12 @@
+@local
+class
+  @public
+    @fun
+      print: void
+        @params
+          text: string
+        Library.print(text)
+
+      test: void
+        print(`Using custom print function.`)
+        Library.print(`Using native print function.`)

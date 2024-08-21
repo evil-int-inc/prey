@@ -1,0 +1,10 @@
+@import
+  .LibraryConflict
+
+class
+  @fun
+    init: void
+      @read
+        libraryConflict = LibraryConflict()
+
+      libraryConflict.test()

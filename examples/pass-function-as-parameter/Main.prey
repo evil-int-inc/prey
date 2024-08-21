@@ -6,4 +6,5 @@ class
     init: void
       @read
         functionParameter = FunctionParameter()
-        functionParameter.test()
+
+      functionParameter.test()
