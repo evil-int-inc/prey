@@ -1,0 +1,12 @@
+@import
+  .SelfCall
+
+class
+  @fun
+    init: void
+      @read
+        selfCallOne = SelfCall(1)
+        selfCallTwo = selfCallOne.add(selfCallOne)
+
+      print(`selfCallOne.a = {selfCallOne.a}`)
+      print(`selfCallTwo.a = {selfCallTwo.a}`)

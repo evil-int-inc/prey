@@ -1,0 +1,14 @@
+@onlyUp
+class
+  @params
+    b: integer
+
+  @public
+    a = b
+
+    @fun
+      add: SelfCall
+        @params
+          x: SelfCall
+
+        => SelfCall(a + x.a)
