@@ -13,22 +13,20 @@ class String__ {
         {
             return std::to_string(i);
         }
-        // // TODO: it's `char *i`
-        // TODO: it works incorrectly
-        // static std::string to_string(const std::string &i) {
-        //     return i.substr();
-        // }
+        static std::string to_string(const std::string &i) {
+            return i;
+        }
         static std::string to_string(const char &i)
         {
             return std::to_string(i);
         }
         // TODO: works incorrectly
-        static std::string to_string(char i[])
-        {
-            std::string str = "";
-            str += i;
-            return str;
-        }
+//         static std::string to_string(char i[])
+//         {
+//             std::string str = "";
+//             str += i;
+//             return str;
+//         }
         static std::string to_string(const bool &i)
         {
             return std::to_string(i);

@@ -1,0 +1,16 @@
+@onlyUp
+class
+  @template
+    _PrintedValue
+    _T
+  @params
+    a: _PrintedValue
+    b: _PrintedValue
+    t: _T
+
+  @public
+    @fun
+      test: void
+        print(`a: {a}`)
+        print(`b: {b}`)
+        print(`Value of type _T: {t}`)

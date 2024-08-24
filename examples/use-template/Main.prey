@@ -1,0 +1,10 @@
+@import
+  .Template
+
+class
+  @fun
+    init: void
+      @read
+        template = Template<integer, string>(1, 2, `Template!`)
+
+      template.test()
