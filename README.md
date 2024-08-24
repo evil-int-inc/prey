@@ -3,7 +3,7 @@
 Prey - programming language.
 [license - APACHE 2.0](LICENSE)
 
-# Prey - programming language. Current version 0.15.7.
+# Prey - programming language. Current version 0.15.8.
 
 # To run programs do followings:
 - run `sh <path-to-prey.sh-script> <path-to-source-code>`
@@ -854,3 +854,9 @@ class
 - added ./examples/pass-function-as-parameter
 - added ./examples/library-conflict
 - added ./examples/self-call
+
+# 0.15.8.
+## bugfix:
+- fixed incorrect string parsing.
+- fixed internal language name conflicts.
+- added ./examples/use-template
