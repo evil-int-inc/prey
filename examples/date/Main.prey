@@ -1,0 +1,10 @@
+@import
+  .TestDate
+
+class
+  @fun
+    init: void
+      @read
+        testDate = TestDate()
+
+      testDate.test()

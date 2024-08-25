@@ -2,9 +2,14 @@
 // Created by Ruslan on 15.09.2023.
 //
 #include <iostream>
+#include <ctime>
 
 class String__ {
     public:
+        static std::string to_string(const time_t &i)
+        {
+                return std::to_string(i);
+        }
         static std::string to_string(const int &i)
         {
             return std::to_string(i);
@@ -20,13 +25,10 @@ class String__ {
         {
             return std::to_string(i);
         }
-        // TODO: works incorrectly
-//         static std::string to_string(char i[])
-//         {
-//             std::string str = "";
-//             str += i;
-//             return str;
-//         }
+        static std::string to_string(const char *i) {
+            std::string std_string(i);
+            return std_string;
+        }
         static std::string to_string(const bool &i)
         {
             return std::to_string(i);

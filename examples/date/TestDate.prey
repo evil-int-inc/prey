@@ -1,0 +1,14 @@
+@onlyUp
+class
+  @public
+    @fun
+      test: void
+        @read
+          nowDate = Date.now()
+          wrongDate = Date(-1)
+
+        print(`nowDate.ms: {nowDate.ms}`)
+        print(`nowDate isoString: {Date.toISOString(nowDate)}`)
+        print(`-------------`)
+        print(`wrongDate.ms: {wrongDate.ms}`)
+        print(`wrongDate isoString: {Date.toISOString(wrongDate)}`)

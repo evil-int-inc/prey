@@ -23,16 +23,19 @@ class Date__ {
         inline static const unsigned monthsInYear = 12;
         inline static const unsigned monthsInQuarter = 3;
         inline static const unsigned monthsInHalfOfYear = monthsInQuarter * 2;
-        static int now()
+        time_t ms;
+        static Date__ now()
         {
-            return time(0);
+            return Date__(time(0));
         }
-        static std::string toISOString(const int t)
-        {
-            return String__::to_string(ctime((time_t*)t));
+        static std::string toISOString(const Date__ &date) {
+            const time_t* t = &date.ms;
+            std::string str = String__::to_string(ctime(t));
+            str.erase(str.length() - 1);
+
+            return str;
         }
-        int ms;
-        Date__(const int ms)
+        Date__(const time_t ms)
         {
             this->ms = ms;
         }
