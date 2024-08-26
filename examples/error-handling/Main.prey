@@ -1,0 +1,10 @@
+@import
+  .TestError
+
+class
+  @fun
+    init: void
+      @read
+        testError = TestError()
+
+      testError.test()
