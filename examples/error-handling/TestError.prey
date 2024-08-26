@@ -1,0 +1,34 @@
+@local
+class
+  @fun
+    returnShortcutDate: Date
+      @read
+        ms = 777
+      => Date(
+        ms
+
+    throwShortcutError: void
+      ==> MessageError(
+        message = `Throw first test error.`
+
+    throwError: void
+      ==> MessageError(`Throw second test error.`)
+
+  @public
+    @fun
+      test: void
+        # Test compilation error: Variable is not defined: error.
+        # print(error)
+        @let
+          date = Date(0)
+
+        try
+          throwShortcutError()
+        catch e
+          print(e.message)
+
+        try
+          date = returnShortcutDate()
+          throwError()
+        catch e
+          print(e.message)

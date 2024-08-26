@@ -1,0 +1,24 @@
+@local
+class
+  @fun
+    @async
+    testIntegerFuture: Future<integer>
+      => 777
+
+    @async
+    testVoidFuture: Future<void>
+      @read
+        value = ~testIntegerFuture()
+
+      print(`Value is printed asynchronously: {value}`)
+
+  @public
+    @fun
+      test: void
+        @read
+          startDate = Date.now()
+        print(`Started at: {startDate.ms}`)
+        testVoidFuture()
+        @read
+          endDate = Date.now()
+        print(`Finished at: {endDate.ms}`)

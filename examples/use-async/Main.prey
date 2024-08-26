@@ -1,0 +1,10 @@
+@import
+  .TestFuture
+
+class
+  @fun
+    init: void
+      @read
+        testFuture = TestFuture()
+
+      testFuture.test()
