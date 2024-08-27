@@ -1,0 +1,10 @@
+@import
+  .TestTypeConversion
+
+class
+  @fun
+    init: void
+      @read
+        testTypeConversion = TestTypeConversion()
+
+      testTypeConversion.test()

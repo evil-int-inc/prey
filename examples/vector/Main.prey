@@ -1,0 +1,10 @@
+@import
+  .TestVector
+
+class
+  @fun
+    init: void
+      @read
+        testVector = TestVector()
+
+      testVector.test()

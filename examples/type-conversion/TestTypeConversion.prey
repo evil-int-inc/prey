@@ -1,0 +1,14 @@
+@onlyUp
+class
+  @public
+    @fun
+      test: void
+        @read
+          string = `string`
+          toString = @string
+          toNumber = +string
+          toBoolean = !!string
+
+        print(`string as string: {toString}.`)
+        print(`string as number: {toNumber}.`)
+        print(`string as boolean: {toBoolean}.`)
