@@ -1,0 +1,14 @@
+@onlyUp
+class
+  @public
+    @static
+      re = /w/i
+
+    @fun
+      test: void
+        @read
+          text = `Result: `
+        if search(`word`, re)
+          print(`{text}true`)
+        else
+          print(`{text}false`)

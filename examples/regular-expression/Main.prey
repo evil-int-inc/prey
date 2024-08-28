@@ -1,0 +1,10 @@
+@import
+  .TestRegularExpression
+
+class
+  @fun
+    init: void
+      @read
+        testRegularExpression = TestRegularExpression()
+
+      testRegularExpression.test()
