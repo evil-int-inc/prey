@@ -1,0 +1,15 @@
+@local
+class
+  @public
+    @fun
+      test: void
+        @read
+          map = Map<string, integer>()
+          map.set(`theater`, 0)
+          map.set(`office`, 1)
+          map.set(`skyscraper`, 2)
+          map.set(`theater`, -1)
+
+        print(`Value of theater key: {map.get(`theater`)}`)
+        print(`Value of skyscraper key: {map.get(`skyscraper`)}`)
+        print(`Size of a map: {map.size}`)

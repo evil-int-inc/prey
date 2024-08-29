@@ -1,0 +1,10 @@
+@import
+  .TestForIn
+
+class
+  @fun
+    init: void
+      @read
+        testForIn = TestForIn(11)
+
+      testForIn.test()

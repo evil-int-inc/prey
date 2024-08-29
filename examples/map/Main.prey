@@ -1,0 +1,10 @@
+@import
+  .TestMap
+
+class
+  @fun
+    init: void
+      @read
+        testMap = TestMap()
+
+      testMap.test()

@@ -1,0 +1,54 @@
+@local
+class
+  @params
+    x = 10
+  @public
+    @let
+      y = x - 10
+
+    @fun
+      test: void
+        for value in x
+          print(`index from x: {value}`)
+          for value, key in y
+            print(`value from y: {value}`)
+            print(`key from y: {value}`)
+
+        print(`---------`)
+
+        for char, index in `for in`
+          print(`value: {char}`)
+          print(`key: {index}`)
+
+        print(`---------`)
+
+        for char in `for in`
+          print(`char: {char}`)
+
+        print(`---------`)
+
+        @read
+          v = Vector<string>(`f`, `o, `r, ` `, `i`, `n`)
+          m = Map<string, integer>()
+          m.set(`H`, -1)
+          m.set(`i`, 1)
+
+        for char, index in v
+          print(`value: {char}`)
+          print(`key: {index}`)
+
+        print(`---------`)
+
+        for char in v
+          print(`value: {char}`)
+
+        print(`---------`)
+
+        for number, char in m
+          print(`value: {char}`)
+          print(`key: {number}`)
+
+        print(`---------`)
+
+        for char in m
+          print(`value: {char}`)
