@@ -23,11 +23,12 @@ class String__ {
         }
         static std::string to_string(const char &i)
         {
-            return std::to_string(i);
+            std::string string(1, i);
+            return string;
         }
         static std::string to_string(const char *i) {
-            std::string std_string(i);
-            return std_string;
+            std::string string(i);
+            return string;
         }
         static std::string to_string(const bool &i)
         {
