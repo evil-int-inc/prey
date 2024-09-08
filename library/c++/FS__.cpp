@@ -3,10 +3,12 @@
 //
 #include <iostream>
 #include <fstream>
+#include <optional>
 
 class FS__ {
 public:
-    static void write(const std::string& path, std::string data, bool rewrite = false) {
+    static void write(const std::string& path, std::string data, const std::optional<bool> rewrite_) {
+        const bool rewrite = rewrite_.value_or(false);
         std::ofstream file;
         if (rewrite) {
             file.open(path);
@@ -17,7 +19,7 @@ public:
             file << data << std::endl;
             file.close();
         } else {
-            throw MessageError__("Unable to open the file.");
+            throw MessageError__("Unable to open the file.", std::nullopt, std::nullopt);
         }
     }
 
@@ -43,7 +45,7 @@ public:
             file.read(&content[0], content.size());
             file.close();
         } else {
-            throw MessageError__("Unable to open the file.");
+            throw MessageError__("Unable to open the file.", std::nullopt, std::nullopt);
         }
 
         return content;

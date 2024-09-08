@@ -3,6 +3,7 @@
 //
 // TODO: remove '#include <iostream>'
 #include <iostream>
+#include <optional>
 
 class ErrorData__ {
 public:
@@ -43,8 +44,8 @@ public:
             std::string const message,
             std::string const filename,
             std::string const filepath,
-            int const code = -1,
-            int const line = -1) : Root__("error", subtype, new ErrorData__(message, filename, filepath, line), code) {
+            std::optional<int> const code_,
+            std::optional<int> const line_) : Root__("error", subtype, new ErrorData__(message, filename, filepath, line_.value_or(-1)), code_.value_or(-1)) {
     }
 
     ~Error__() {
@@ -70,8 +71,10 @@ public:
 
     MessageError__(
             std::string const message,
-            std::string const mapCode = "-1",
-            int const code = 2) {
+            std::optional<std::string> const mapCode_,
+            std::optional<int> const code_) {
+        const std::string mapCode = mapCode_.value_or("-1");
+        const int code = code_.value_or(2);
         this->type = "error";
         this->subtype = "runtime";
         this->message = message;
