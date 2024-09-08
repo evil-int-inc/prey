@@ -1,0 +1,10 @@
+@import
+  .TestConditions
+
+class
+  @fun
+    init: void
+      @read
+        testConditions = TestConditions()
+
+      testConditions.test()

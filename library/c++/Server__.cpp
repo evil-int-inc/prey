@@ -49,7 +49,7 @@ public:
         this->listenSocket = socket(AF_INET, SOCK_STREAM, 0);
 
         if (listenSocket == -1) {
-            throw MessageError__("Server socket() failed.");
+            throw MessageError__("Server socket() failed.", std::nullopt, std::nullopt);
         }
 
         // * Bind the socket to an address
@@ -62,13 +62,13 @@ public:
         // * Bind socket to an address
         if (::bind(listenSocket, (struct sockaddr *) &serverAddress, sizeof(serverAddress)) == -1) {
             close(listenSocket);
-            throw MessageError__("Server bind() failed.");
+            throw MessageError__("Server bind() failed.", std::nullopt, std::nullopt);
         }
 
         // * Start listening for connections
         if (listen(listenSocket, SOMAXCONN) == -1) {
             close(listenSocket);
-            throw MessageError__("Server listen() failed.");
+            throw MessageError__("Server listen() failed.", std::nullopt, std::nullopt);
         }
 
         // Accept a client connection (replace with your handling logic)

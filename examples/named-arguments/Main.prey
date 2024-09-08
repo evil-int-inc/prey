@@ -1,0 +1,10 @@
+@import
+  .TestNamedArguments
+
+class
+  @fun
+    init: void
+      @read
+        testNamedArguments = TestNamedArguments()
+
+      testNamedArguments.test()
