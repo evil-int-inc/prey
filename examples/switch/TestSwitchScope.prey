@@ -1,0 +1,26 @@
+@onlyUp
+class
+  @params
+    x = 10
+  @public
+    @let
+      y = x - 10
+
+    @fun
+      test: void
+        switch y
+          case 1
+          case 2
+          case 3
+          if y > 7
+            print(y)
+          match /w/i
+            print(y - 6)
+          default
+            print(`default`)
+
+        switch 0
+          case 0
+            print(0)
+          default
+            print(1)
