@@ -1,0 +1,10 @@
+@import
+  .TestSwitchScope
+
+class
+  @fun
+    init: void
+      @read
+        testSwitchScope = TestSwitchScope()
+
+      testSwitchScope.test()
