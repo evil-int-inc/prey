@@ -1,0 +1,10 @@
+@import
+  .TestWhileScope
+
+class
+  @fun
+    init: void
+      @read
+        testWhileScope = TestWhileScope()
+
+      testWhileScope.test()

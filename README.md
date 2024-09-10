@@ -899,3 +899,4 @@ class
 ## bugfix:
 - fixed incorrect working of `match` operator of switch scope.
 - added ./examples/switch
+- added ./examples/while
