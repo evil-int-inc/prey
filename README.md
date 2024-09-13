@@ -3,7 +3,7 @@
 Prey - programming language.
 [license - APACHE 2.0](LICENSE)
 
-# Prey - programming language. Current version 0.15.15.
+# Prey - programming language. Current version 0.15.16.
 
 # To run programs do followings:
 - run `sh <path-to-prey.sh-script> <path-to-source-code>`
@@ -900,3 +900,7 @@ class
 - fixed incorrect working of `match` operator of switch scope.
 - added ./examples/switch
 - added ./examples/while
+
+# 0.15.16.
+## bugfix:
+- added function return type validation.
