@@ -3,7 +3,7 @@
 Prey - programming language.
 [license - APACHE 2.0](LICENSE)
 
-# Prey - programming language. Current version 0.15.16.
+# Prey - programming language. Current version 0.15.17.
 
 # To run programs do followings:
 - run `sh <path-to-prey.sh-script> <path-to-source-code>`
@@ -904,3 +904,7 @@ class
 # 0.15.16.
 ## bugfix:
 - added function return type validation.
+
+# 0.15.17.
+## bugfix:
+- argument of a print function now has special internal type: printable. It includes primitives, Date, Vector and Map.

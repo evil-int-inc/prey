@@ -13,3 +13,5 @@ class
         print(`Value of theater key: {map.get(`theater`)}`)
         print(`Value of skyscraper key: {map.get(`skyscraper`)}`)
         print(`Size of a map: {map.size}`)
+        print(`-------------`)
+        print(map)

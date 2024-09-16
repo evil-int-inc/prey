@@ -28,7 +28,7 @@ class
         print(`---------`)
 
         @read
-          v = Vector<string>(`f`, `o, `r, ` `, `i`, `n`)
+          v = Vector<string>(`f`, `o`, `r`, ` `, `i`, `n`)
           m = Map<string, integer>()
           m.set(`H`, -1)
           m.set(`i`, 1)
