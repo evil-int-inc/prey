@@ -12,3 +12,5 @@ class
         print(`-------------`)
         print(`wrongDate.ms: {wrongDate.ms}`)
         print(`wrongDate isoString: {Date.toISOString(wrongDate)}`)
+        print(`-------------`)
+        print(nowDate)

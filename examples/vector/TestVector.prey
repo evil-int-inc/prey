@@ -10,3 +10,5 @@ class
         print(`First element of vector: {first}`)
         vector.set(0, -1)
         print(`First element of vector after mutation: {vector.get(0)}`)
+        print(`-------------`)
+        print(vector)
