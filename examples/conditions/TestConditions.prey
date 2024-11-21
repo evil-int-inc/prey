@@ -6,7 +6,7 @@ class
     @fun
       test: void
         if x == 777
-          print(x / 7 == 111 ? `true` : `false`)
+          print(x // 7 == 111 ? `true` : `false`)
         else if x == 666
           print(`false`)
         else

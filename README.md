@@ -3,7 +3,7 @@
 Prey - programming language.
 [license - APACHE 2.0](LICENSE)
 
-# Prey - programming language. Current version 0.15.17.
+# Prey - programming language. Current version 0.16.0.
 
 # To run programs do followings:
 - run `sh <path-to-prey.sh-script> <path-to-source-code>`
@@ -908,3 +908,27 @@ class
 # 0.15.17.
 ## bugfix:
 - argument of a print function now has special internal type: printable. It includes primitives, Date, Vector and Map.
+
+
+# 0.16.0.
+## new changes:
+- Added new native non-callable class `Null`. It can keep null value (null-safely).
+- Added value-or-default operator `??`.
+- Added null-or-action operator `?!`.
+- Fixed incorrect working of some binary operators.
+```
+@onlyUp
+class
+  @public
+    @fun
+      test: void
+        @read
+          firstNumber = 1
+          secondNumber = 2
+          nullNumber: Null<integer>
+          
+        print(`nullNumber ?? secondNumber: {nullNumber ?? secondNumber}.`)
+        @read
+          nullResult = nullNumber ?! secondNumber
+        print(`nullNumber ?! secondNumber: {nullResult ?? 111}.`)  
+```
