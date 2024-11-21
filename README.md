@@ -913,8 +913,8 @@ class
 # 0.16.0.
 ## new changes:
 - Added new native non-callable class `Null`. It can keep null value (null-safely).
-- Added value-or-default operator `??`.
-- Added null-or-action operator `?!`.
+- Added value-or-default binary operator `??`.
+- Added null-or-action binary operator `?!`.
 - Fixed incorrect working of some binary operators.
 ```
 @onlyUp
