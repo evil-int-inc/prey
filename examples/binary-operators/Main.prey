@@ -1,0 +1,10 @@
+@import
+  .TestBinaryOperators
+
+class
+  @fun
+    init: void
+      @read
+        testBinaryOperators = TestBinaryOperators()
+
+      testBinaryOperators.test()

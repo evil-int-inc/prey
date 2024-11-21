@@ -1,0 +1,31 @@
+@onlyUp
+class
+  @public
+    @fun
+      test: void
+        @read
+          firstNumber = 1
+          secondNumber = 2
+          nullNumber: Null<integer>
+
+        print(`firstNumber + secondNumber: {firstNumber + secondNumber}.`)
+        print(`firstNumber - secondNumber: {firstNumber - secondNumber}.`)
+        print(`firstNumber * secondNumber: {firstNumber * secondNumber}.`)
+        print(`firstNumber / secondNumber: {firstNumber / secondNumber}.`)
+        print(`firstNumber % secondNumber: {firstNumber % secondNumber}.`)
+        print(`firstNumber // secondNumber: {firstNumber // secondNumber}.`)
+        print(`firstNumber ** secondNumber: {firstNumber ** secondNumber}.`)
+        print(`firstNumber +% secondNumber: {firstNumber +% secondNumber}.`)
+        print(`-------------`)
+        print(`firstNumber > secondNumber: {firstNumber > secondNumber}.`)
+        print(`firstNumber < secondNumber: {firstNumber < secondNumber}.`)
+        print(`firstNumber >= secondNumber: {firstNumber >= secondNumber}.`)
+        print(`firstNumber <= secondNumber: {firstNumber <= secondNumber}.`)
+        print(`-------------`)
+        print(`firstNumber == secondNumber: {firstNumber == secondNumber}.`)
+        print(`firstNumber != secondNumber: {firstNumber != secondNumber}.`)
+        print(`-------------`)
+        print(`nullNumber ?? secondNumber: {nullNumber ?? secondNumber}.`)
+        @read
+          nullResult = nullNumber ?! secondNumber
+        print(`nullNumber ?! secondNumber: {nullResult ?? 111}.`)
