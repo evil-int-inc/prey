@@ -931,3 +931,25 @@ class
           nullResult = nullNumber ?! secondNumber
         print(`nullNumber ?! secondNumber: {nullResult ?? 111}.`)  
 ```
+
+# 0.17.0.
+## new changes:
+- Added multiline string assignment.
+- Fixed incorrect working of string parsing operators.
+```
+@onlyUp
+class
+  @public
+    @fun
+      test: void
+        @read
+          name = `\{operator}`
+          string = `
+            This is multiline string!
+            You can use the same string code operators, like these ones: {name}, \\n, \\\,
+            
+              You also can add spaces before line.
+            The last line of the same level of scope must be the end of the string.
+
+          print(string) 
+```
