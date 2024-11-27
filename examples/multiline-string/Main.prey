@@ -1,0 +1,10 @@
+@import
+  .MultilineString
+
+class
+  @fun
+    init: void
+      @read
+        multilineString = MultilineString()
+
+      multilineString.test()

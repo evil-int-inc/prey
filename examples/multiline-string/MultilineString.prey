@@ -1,0 +1,15 @@
+@onlyUp
+class
+  @public
+    @fun
+      test: void
+        @read
+          name = `\{operator}`
+          string = `
+            This is multiline string!
+            You can use the same string code operators, like these ones: {name}, \\n, \\\,
+
+              You also can add spaces before line.
+            The last line of the same level of scope must be the end of the string.
+
+          print(string)
