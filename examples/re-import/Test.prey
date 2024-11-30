@@ -1,0 +1,10 @@
+@local
+@static
+class
+  @public
+    @fun
+      print: void
+        @params
+          text: string
+
+        Library.print(text)

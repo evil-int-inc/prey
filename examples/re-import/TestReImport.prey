@@ -1,0 +1,15 @@
+@import
+  .FirstClass
+  .SecondClass
+
+@local
+class
+  @public
+    @fun
+      test: void
+        @read
+          firstClass = FirstClass()
+          secondClass = SecondClass()
+
+        firstClass.test()
+        secondClass.test()
