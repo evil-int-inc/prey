@@ -1,0 +1,9 @@
+@import
+  .Test
+
+@local
+class
+  @public
+    @fun
+      test: void
+        Test.print(`Second Class`)

@@ -1,0 +1,10 @@
+@import
+  .TestReImport
+
+class
+  @fun
+    init: void
+      @read
+        testReImport = TestReImport()
+
+      testReImport.test()

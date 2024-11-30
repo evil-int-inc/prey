@@ -3,7 +3,7 @@
 Prey - programming language.
 [license - APACHE 2.0](LICENSE)
 
-# Prey - programming language. Current version 0.16.0.
+# Prey - programming language. Current version 0.17.1.
 
 # To run programs do followings:
 - run `sh <path-to-prey.sh-script> <path-to-source-code>`
@@ -953,3 +953,8 @@ class
 
           print(string) 
 ```
+
+# 0.17.1.
+## bugfix:
+- Fixed error when importing the same class in the different files.
+- Added example re-import
